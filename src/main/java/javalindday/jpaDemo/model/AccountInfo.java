@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class AccountInfo implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private Long accountId;
+  private Integer accountId;
   private Integer balance;
   private UserInfo userInfo;
 
@@ -33,12 +33,12 @@ public class AccountInfo implements Serializable {
     this.balance = balance;
   }
 
-  public Long getAccountId() {
+  public Integer getAccountId() {
 
     return accountId;
   }
 
-  public void setAccountId(Long accountId) {
+  public void setAccountId(Integer accountId) {
     this.accountId = accountId;
   }
 

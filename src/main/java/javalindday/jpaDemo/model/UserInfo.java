@@ -13,8 +13,8 @@ public class UserInfo implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private int id;
-  private String UserName;
-  private String Password;
+  private String userName;
+  private String password;
 
   public int getId() {
 
@@ -27,18 +27,18 @@ public class UserInfo implements Serializable {
 
   public String getUserName() {
 
-    return UserName;
+    return userName;
   }
 
   public void setUserName(String userName) {
-    UserName = userName;
+    this.userName = userName;
   }
 
   public String getPassword() {
-    return Password;
+    return password;
   }
 
   public void setPassword(String password) {
-    Password = password;
+    this.password = password;
   }
 }
