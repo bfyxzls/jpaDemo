@@ -1,9 +1,10 @@
 package javalindday.jpaDemo.service;
 
+import java.util.List;
 import javalindday.jpaDemo.model.AccountInfo;
-import org.springframework.stereotype.Service;
+import javalindday.jpaDemo.model.UserInfo;
 
-@Service
 public interface UserService {
   AccountInfo createNewAccount(String user, String pwd, Integer init);
+  List<UserInfo> getUsers();
 }
