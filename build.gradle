@@ -49,3 +49,4 @@ dependencies {
 
 }
 // mvn install:install-file -Dfile=/Users/lind.zhang/github/jpaDemo/build/libs/jpaDemo-0.0.1.jar -DgroupId=javalindday -DartifactId=jpaDemo -Dversion=0.0.1 -Dpackaging=jar
+// 本地包路：users/currnet_users/.m2/repository
