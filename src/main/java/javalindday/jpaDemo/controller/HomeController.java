@@ -27,6 +27,7 @@ public class HomeController {
   @ApiOperation("用户列表")
   @GetMapping("list")
   public List<UserInfo> userList() {
+    UserInfo u = AccountInfo.builder().build().getUserInfo();
     return userService.getUsers();
   }
 

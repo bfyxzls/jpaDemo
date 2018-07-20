@@ -24,4 +24,8 @@ public class AccountInfo implements Serializable {
   private int accountId;
   private int balance;
   private UserInfo userInfo;
+
+  public UserInfo getUserInfo() {
+    return userInfo == null ? UserInfo.builder().build() : userInfo;
+  }
 }
