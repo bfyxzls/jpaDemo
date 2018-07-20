@@ -5,6 +5,10 @@ import javalindday.jpaDemo.model.AccountInfo;
 import javalindday.jpaDemo.model.UserInfo;
 
 public interface UserService {
-  AccountInfo createNewAccount(String user, String pwd, Integer init);
+  UserInfo createNewAccount(String user, String pwd, String email, Integer init);
+
   List<UserInfo> getUsers();
+
+  List<AccountInfo> getAccounts();
+
 }

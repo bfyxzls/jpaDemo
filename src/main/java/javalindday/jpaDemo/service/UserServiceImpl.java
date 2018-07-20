@@ -17,16 +17,24 @@ public class UserServiceImpl implements UserService {
   AccountInfoRepository accountInfoRepository;
 
   @Override
-  public AccountInfo createNewAccount(String user, String pwd, Integer init) {
-    AccountInfo accountInfo = new AccountInfo();
-    UserInfo userInfo = new UserInfo();
-    userInfo.setUserName(user);
-    userInfo.setPassword(pwd);
-    accountInfo.setBalance(init);
-    accountInfo.setUserInfo(userInfo);
-    userInfoRepository.save(userInfo);
+  public List<AccountInfo> getAccounts() {
+    return accountInfoRepository.findAll();
+  }
+
+  @Override
+  public UserInfo createNewAccount(String user, String pwd, String email, Integer init) {
+    UserInfo userInfo = UserInfo.builder()
+        .Email(email)
+        .password(pwd)
+        .userName(user)
+        .build();
+    AccountInfo accountInfo = AccountInfo.builder()
+        .balance(init)
+        .userInfo(userInfo)
+        .build();
+    userInfo = userInfoRepository.save(userInfo);
     accountInfoRepository.save(accountInfo);
-    return accountInfo;
+    return userInfo;
   }
 
   @Override
